@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/products"; 
+const API_URL = "https://e-commerce-website-1-sy93.onrender.com/api/products"; 
 
 // ✅ Fetch all products
 export const fetchProducts = async () => {

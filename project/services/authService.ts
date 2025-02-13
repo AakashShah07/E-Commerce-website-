@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/users"; 
+const API_URL = "https://e-commerce-website-1-sy93.onrender.com/api/users"; 
 
 export const signup = async (userData: { username: string; password: string }) => {
     try {
