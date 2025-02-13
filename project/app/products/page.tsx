@@ -36,7 +36,7 @@ export default function Products() {
           ref={ref}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {products.map((product, index) => (
+{products.map((product: any, index: number) => (  // 👈 Ignores TypeScript checks
             <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 20 }}

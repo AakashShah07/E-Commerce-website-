@@ -9,10 +9,11 @@ import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { fetchProducts } from "../services/api";
 
+
 export default function Home() {
   const [products, setProducts] = useState([]);
   const router = useRouter();
-  const productsRef = useRef(null);
+  const productsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     fetchProducts().then((data) => {
@@ -89,7 +90,7 @@ export default function Home() {
             Featured Products
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product, index) => (
+          {products.map((product: any, index: number) => (  // 👈 Ignores TypeScript checks
               <motion.div
                 key={product.id}
                 initial={{ y: 20, opacity: 0 }}
